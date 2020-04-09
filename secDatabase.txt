@@ -199,3 +199,18 @@ mysql> select * from students;
 | 1MS19IS028 | C28  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
 | 1MS19IS029 | C29  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
 +------------+------+-----+------+------+------+------+------+------+
+
+mysql> desc students;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| usn   | varchar(32) | NO   | PRI | NULL    |       |
+| name  | varchar(32) | NO   |     | NULL    |       |
+| sem   | int         | NO   |     | NULL    |       |
+| sect  | varchar(1)  | NO   |     | A       |       |
+| sub1  | int         | NO   |     | 0       |       |
+| sub2  | int         | NO   |     | 0       |       |
+| sub3  | int         | NO   |     | 0       |       |
+| sub4  | int         | NO   |     | 0       |       |
+| sub5  | int         | NO   |     | 0       |       |
++-------+-------------+------+-----+---------+-------+
