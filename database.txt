@@ -1,0 +1,64 @@
+mysql> create database students;
+
+mysql> use students;
+
+mysql> create table students
+	-> (
+    -> usn varchar(32) primary key,
+    -> name varchar(32) not null,
+    -> attendance int not null default 0
+    -> );
+
+mysql> desc students;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| usn        | varchar(32) | NO   | PRI | NULL    |       |
+| name       | varchar(32) | NO   |     | NULL    |       |
+| attendance | int         | NO   |     | 0       |       |
++------------+-------------+------+-----+---------+-------+
+
+mysql> insert into students values("1MS17IS145", "R Anurag Pillai", 0);
+
+mysql> insert into students values("1MS17IS033", "Ayush Ujjwal", 0);
+
+mysql> insert into students values("1MS17IS015", "Aman Gupta", 0);
+
+mysql> select * from students;
++------------+-----------------+------------+
+| usn        | name            | attendance |
++------------+-----------------+------------+
+| 1MS17IS015 | Aman Gupta      |          0 |
+| 1MS17IS033 | Ayush Ujjwal    |          0 |
+| 1MS17IS145 | R Anurag Pillai |          0 |
++------------+-----------------+------------+
+
+mysql> insert into students values("1MS17IS001", "A1", 0);
+
+mysql> insert into students values("1MS17IS002", "A2", 0);
+
+mysql> insert into students values("1MS17IS003", "A3", 0);
+
+mysql> insert into students values("1MS17IS004", "A4", 0);
+
+mysql> insert into students values("1MS17IS005", "A5", 0);
+
+mysql> insert into students values("1MS17IS006", "A6", 0);
+
+mysql> insert into students values("1MS17IS007", "A7", 0);
+
+mysql> insert into students values("1MS17IS008", "A8", 0);
+
+mysql> insert into students values("1MS17IS009", "A9", 0);
+
+mysql> insert into students values("1MS17IS010", "A10", 0);
+
+mysql> insert into students values("1MS17IS011", "A11", 0);
+
+mysql> insert into students values("1MS17IS012", "A12", 0);
+
+mysql> update students
+    -> set attendance = attendance +1
+    -> where usn = '1MS17IS145';
+
+
