@@ -1,0 +1,201 @@
+mysql> create table students
+    -> (
+    -> usn varchar(32) primary key,
+    -> name varchar(32) not null,
+    -> sem int not null,
+    -> sect varchar(1) not null default 'A',
+    -> sub1 int not null default 0,
+    -> sub2 int not null default 0,
+    -> sub3 int not null default 0,
+    -> sub4 int not null default 0,
+    -> sub5 int not null default 0
+    -> );
+
+mysql> insert into students values('1MS17IS000', 'A60', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS001', 'A61', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS002', 'A62', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS003', 'A63', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS004', 'A64', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS005', 'A65', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS006', 'A66', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS007', 'A67', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS008', 'A68', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS009', 'A69', 6, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS010', 'B60', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS011', 'B61', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS012', 'B62', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS013', 'B63', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS014', 'B64', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS015', 'B65', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS016', 'B66', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS017', 'B67', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS018', 'B68', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS019', 'B69', 6, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS020', 'C60', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS021', 'C61', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS022', 'C62', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS023', 'C63', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS024', 'C64', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS025', 'C65', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS026', 'C66', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS027', 'C67', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS028', 'C68', 6, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS17IS029', 'C69', 6, 'C', 0,0,0,0,0);
+
+mysql> insert into students values('1MS18IS000', 'A40', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS001', 'A41', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS002', 'A42', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS003', 'A43', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS004', 'A44', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS005', 'A45', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS006', 'A46', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS007', 'A47', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS008', 'A48', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS009', 'A49', 4, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS010', 'B40', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS011', 'B41', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS012', 'B42', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS013', 'B43', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS014', 'B44', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS015', 'B45', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS016', 'B46', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS017', 'B47', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS018', 'B48', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS019', 'B49', 4, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS020', 'C40', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS021', 'C41', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS022', 'C42', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS023', 'C43', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS024', 'C44', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS025', 'C45', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS026', 'C46', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS027', 'C47', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS028', 'C48', 4, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS18IS029', 'C49', 4, 'C', 0,0,0,0,0);
+
+mysql> insert into students values('1MS19IS000', 'A20', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS001', 'A21', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS002', 'A22', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS003', 'A23', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS004', 'A24', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS005', 'A25', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS006', 'A26', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS007', 'A27', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS008', 'A28', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS009', 'A29', 2, 'A', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS010', 'B20', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS011', 'B21', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS012', 'B22', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS013', 'B23', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS014', 'B24', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS015', 'B25', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS016', 'B26', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS017', 'B27', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS018', 'B28', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS019', 'B29', 2, 'B', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS020', 'C20', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS021', 'C21', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS022', 'C22', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS023', 'C23', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS024', 'C24', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS025', 'C25', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS026', 'C26', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS027', 'C27', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS028', 'C28', 2, 'C', 0,0,0,0,0);
+mysql> insert into students values('1MS19IS029', 'C29', 2, 'C', 0,0,0,0,0);
+
+mysql> select * from students;
++------------+------+-----+------+------+------+------+------+------+
+| usn        | name | sem | sect | sub1 | sub2 | sub3 | sub4 | sub5 |
++------------+------+-----+------+------+------+------+------+------+
+| 1MS17IS000 | A60  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS001 | A61  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS002 | A62  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS003 | A63  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS004 | A64  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS005 | A65  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS006 | A66  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS007 | A67  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS008 | A68  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS009 | A69  |   6 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS010 | B60  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS011 | B61  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS012 | B62  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS013 | B63  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS014 | B64  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS015 | B65  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS016 | B66  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS017 | B67  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS018 | B68  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS019 | B69  |   6 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS020 | C60  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS021 | C61  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS022 | C62  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS023 | C63  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS024 | C64  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS025 | C65  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS026 | C66  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS027 | C67  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS028 | C68  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS17IS029 | C69  |   6 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS000 | A40  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS001 | A41  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS002 | A42  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS003 | A43  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS004 | A44  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS005 | A45  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS006 | A46  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS007 | A47  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS008 | A48  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS009 | A49  |   4 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS010 | B40  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS011 | B41  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS012 | B42  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS013 | B43  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS014 | B44  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS015 | B45  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS016 | B46  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS017 | B47  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS018 | B48  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS019 | B49  |   4 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS020 | C40  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS021 | C41  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS022 | C42  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS023 | C43  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS024 | C44  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS025 | C45  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS026 | C46  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS027 | C47  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS028 | C48  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS18IS029 | C49  |   4 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS000 | A20  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS001 | A21  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS002 | A22  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS003 | A23  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS004 | A24  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS005 | A25  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS006 | A26  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS007 | A27  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS008 | A28  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS009 | A29  |   2 | A    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS010 | B20  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS011 | B21  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS012 | B22  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS013 | B23  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS014 | B24  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS015 | B25  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS016 | B26  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS017 | B27  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS018 | B28  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS019 | B29  |   2 | B    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS020 | C20  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS021 | C21  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS022 | C22  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS023 | C23  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS024 | C24  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS025 | C25  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS026 | C26  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS027 | C27  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS028 | C28  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
+| 1MS19IS029 | C29  |   2 | C    |    0 |    0 |    0 |    0 |    0 |
++------------+------+-----+------+------+------+------+------+------+
