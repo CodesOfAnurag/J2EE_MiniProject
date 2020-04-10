@@ -214,3 +214,117 @@ mysql> desc students;
 | sub4  | int         | NO   |     | 0       |       |
 | sub5  | int         | NO   |     | 0       |       |
 +-------+-------------+------+-----+---------+-------+
+
+mysql> create table login
+    -> (
+    -> user varchar(32) primary key,
+    -> pass varchar(32) not null,
+    -> desg varchar(1) not null default 'T'
+    -> );
+
+mysql> insert into login values('root', 'root', 'T');
+
+mysql> insert into login values('admin', 'admin', 'T');
+
+mysql> insert into login values('T1', 'T1', 'T');
+
+mysql> insert into login values('T2', 'T2', 'T');
+
+mysql> insert into login values('T3', 'T3', 'T');
+
+mysql> insert into login values('A1', 'A1', 'A');
+
+mysql> insert into login values('A2', 'A2', 'A');
+
+mysql> insert into login values('A3', 'A3', 'A');
+
+mysql> select * from login;
++-------+-------+------+
+| user  | pass  | desg |
++-------+-------+------+
+| A1    | A1    | A    |
+| A2    | A2    | A    |
+| A3    | A3    | A    |
+| admin | admin | T    |
+| root  | root  | T    |
+| T1    | T1    | T    |
+| T2    | T2    | T    |
+| T3    | T3    | T    |
++-------+-------+------+
+
+mysql> desc login;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| user  | varchar(32) | NO   | PRI | NULL    |       |
+| pass  | varchar(32) | NO   |     | NULL    |       |
+| desg  | varchar(1)  | NO   |     | T       |       |
++-------+-------------+------+-----+---------+-------+
+
+mysql> create table teacher(
+    -> user varchar(32) references login(user),
+    -> sub int not null check (sub in (1,2,3,4,5)),
+    -> sem int not null check (sem in (2,4,6)),
+    -> sec varchar(1) not null check (sec in ('A', 'B', 'C')),
+    -> primary key(user, sub, sem, sec)
+    -> );
+
+mysql> desc teacher;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| user  | varchar(32) | NO   | PRI | NULL    |       |
+| sub   | int         | NO   | PRI | NULL    |       |
+| sem   | int         | NO   | PRI | NULL    |       |
+| sec   | varchar(1)  | NO   | PRI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+
+mysql> insert into teacher values('T1', 1, 2);
+
+mysql> insert into teacher values('T1', 2, 2, 'A');
+
+mysql> insert into teacher values('T2', 3, 4, 'A');
+
+mysql> insert into teacher values('T3', 4, 4, 'A');
+
+mysql> insert into teacher values('T3', 5, 4, 'A');
+
+mysql> insert into teacher values('T4', 3, 2, 'A');
+
+mysql> insert into teacher values('T4', 4, 2, 'B');
+
+mysql> insert into teacher values('T4', 5, 2, 'B');
+
+mysql> insert into teacher values('T1', 1, 4, 'B');
+
+mysql> insert into teacher values('T3', 2, 4, 'B');
+
+mysql> insert into teacher values('T1', 1, 6, 'B');
+
+mysql> insert into teacher values('T1', 2, 6, 'C');
+
+mysql> insert into teacher values('T2', 3, 6, 'C');
+
+mysql> insert into teacher values('T3', 4, 6, 'C');
+
+mysql> insert into teacher values('T4', 5, 6, 'C');
+
+mysql> select * from teacher order by sem;
++------+-----+-----+-----+
+| user | sub | sem | sec |
++------+-----+-----+-----+
+| T1   |   2 |   2 | A   |
+| T4   |   3 |   2 | A   |
+| T4   |   4 |   2 | B   |
+| T4   |   5 |   2 | B   |
+| T1   |   1 |   4 | B   |
+| T2   |   3 |   4 | A   |
+| T3   |   2 |   4 | B   |
+| T3   |   4 |   4 | A   |
+| T3   |   5 |   4 | A   |
+| T1   |   1 |   6 | B   |
+| T1   |   2 |   6 | C   |
+| T2   |   3 |   6 | C   |
+| T3   |   4 |   6 | C   |
+| T4   |   5 |   6 | C   |
++------+-----+-----+-----+
