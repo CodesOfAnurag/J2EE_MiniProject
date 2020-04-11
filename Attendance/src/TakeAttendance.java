@@ -15,16 +15,20 @@ public class TakeAttendance extends JFrame{
     Statement st;
     ResultSet res;
     Integer size;
-    TakeAttendance() throws ClassNotFoundException, SQLException{
+    String sect, sem, subj;
+    TakeAttendance(String sc, String sm, String sb) throws ClassNotFoundException, SQLException{
         super("Attendance");
         super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
         
+        sect = sc;
+        sem = sm;
+        subj = sb;
         attendance = new HashMap<String, Integer>();
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root", "root");
 		Class.forName("com.mysql.jdbc.Driver");
 		st = con.createStatement();
         
-        res = st.executeQuery("select * from students;");
+		res = st.executeQuery("select * from students where sect = '"+sect+"' and sem = '"+sem+"' order by usn;");
         size=0;
         if (res != null) { res.last();	size = res.getRow(); }
         System.out.println(size);
@@ -39,7 +43,7 @@ public class TakeAttendance extends JFrame{
         pane.add(new JLabel("NAME"));
         pane.add(new JLabel("ABSENT"));
 
-        res = st.executeQuery("select * from students order by usn;");
+        res = st.executeQuery("select * from students where sect = '"+sect+"' and sem = '"+sem+"' order by usn;");
         while (res.next())
         {
         	String usn = res.getString(1);
@@ -85,7 +89,7 @@ public class TakeAttendance extends JFrame{
 				try {
 					for (String x : usns) {
 						if (attendance.get(x)==1) {
-							String sql = "update students set attendance = attendance +1 where usn = '"+x+"';";
+							String sql = "update students set sub"+subj+"=sub"+subj+"+1 where usn = '"+x+"';";
 							
 								st.executeUpdate(sql);
 							
@@ -94,26 +98,18 @@ public class TakeAttendance extends JFrame{
 					dpane.setLayout(new GridLayout(size+1,3));
 					dpane.add(new JLabel("USN"));
 					dpane.add(new JLabel("NAME"));
-					dpane.add(new JLabel("ATTENDANCE"));
+					dpane.add(new JLabel("SUBJECT"+subj));
 					jsp.setViewportView(dpane);
-					res = st.executeQuery("select * from students order by usn;");
+					res = st.executeQuery("select usn, name, sub"+subj+" from students where sect = '"+sect+"' and sem = '"+sem+"' order by usn;");
 					while(res.next()) {
 						dpane.add(new JLabel(res.getString(1)));
 						dpane.add(new JLabel(res.getString(2)));
 						dpane.add(new JLabel(res.getString(3)));
 					}
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}});
         add(jsp);
-    }
-
-    public static void main(String args[])  throws ClassNotFoundException, SQLException {
-        TakeAttendance tk = new TakeAttendance();
-        tk.setVisible(true);
-        tk.setSize(400, 360);
-        tk.setLayout(new GridLayout());
     }
 }
