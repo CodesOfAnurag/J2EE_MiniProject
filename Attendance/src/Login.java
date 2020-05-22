@@ -80,10 +80,12 @@ public class Login extends JFrame{
 				LoginAdmin = GenralLoginDialog(admins);
 				System.out.println(LoginAdmin);
 				setVisible(false);
-				AdminPage ap = new AdminPage();
-				ap.setVisible(true);
-				ap.setSize(320, 180);
-				ap.setLayout(new FlowLayout());
+				if (LoginAdmin!=null) {
+					AdminPage ap = new AdminPage();
+					ap.setVisible(true);
+					ap.setSize(320, 180);
+					ap.setLayout(new FlowLayout());
+				}
 			}
 		});
         
@@ -124,7 +126,7 @@ public class Login extends JFrame{
 		String login = JOptionPane.showInputDialog(null, "Enter ID");
 		if (login==null)
 			System.exit(0);
-		for(i=0; !hm.keySet().contains(login) && i<2 ;i++) {
+		for(i=0; !hm.keySet().contains(login) && i<=2 ;i++) {
 			login = JOptionPane.showInputDialog(null, "Enter correct ID", "", JOptionPane.WARNING_MESSAGE);
 			if (login==null)
 				System.exit(0);
@@ -137,7 +139,7 @@ public class Login extends JFrame{
 		String pass = JOptionPane.showInputDialog(null, "Enter Password");
 		if (pass==null)
 			System.exit(0);
-		for(i=0; !hm.get(login).equals(pass) && i<2;i++) {
+		for(i=0; !hm.get(login).equals(pass) && i<=2;i++) {
 			pass = JOptionPane.showInputDialog(null, "Enter correct Password", "", JOptionPane.WARNING_MESSAGE);
 			if (pass==null)
 				System.exit(0);

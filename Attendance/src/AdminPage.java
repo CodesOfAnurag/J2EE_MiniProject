@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class AdminPage extends JFrame {
 
 	private static final long serialVersionUID = 8859753445286040949L;
-	JButton addS, addT, addA;
+	JButton addS, addT, addA, exitB;
 	JPanel pane;
 
 	AdminPage(){
@@ -16,15 +16,17 @@ public class AdminPage extends JFrame {
 		addS = new JButton("Add new student");
 		addT = new JButton("Add new teacher");
 		addA = new JButton("Add new admin");
+		exitB = new JButton("Exit");
 		
 		pane.add(addS);
 		pane.add(addT);
 		pane.add(addA);
-		pane.setLayout(new GridLayout(3,1));
+		pane.add(exitB);
+		pane.setLayout(new GridLayout(4,1));
 		add(pane);
 		setVisible(true);
 		setLayout(new FlowLayout());
-		setSize(300, 150);
+		setSize(280, 150);
 		
 		addS.addActionListener(new ActionListener(){
 		 	public void actionPerformed(ActionEvent evt){
@@ -73,5 +75,11 @@ public class AdminPage extends JFrame {
 				}
 		 	}
 		 });
+		
+		exitB.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent evt){
+				System.exit(0);
+			}
+		});
 	}
 }
